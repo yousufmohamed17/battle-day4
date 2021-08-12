@@ -15,13 +15,22 @@ class Battle < Sinatra::Base
   post "/names" do
     session[:name1] = params[:name1]
     session[:name2] = params[:name2]
+    session[:attack] = nil
     redirect "/play"
   end
 
   get "/play" do
     @name1 = session[:name1]
     @name2 = session[:name2]
+    @attack = session[:attack]
     erb(:play)
+  end
+
+  post "/attack" do
+    # session[:name1] = @name1
+    # session[:name2] = @name2
+    session[:attack] = true
+    redirect "/play"
   end
 
   run! if app_file == $0

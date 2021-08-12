@@ -1,4 +1,19 @@
 <h1><%= @name1 %> vs <%= @name2 %></h1>
+
 <br>
 <br>
+
 <h2><%= @name2 %>'s HP: 60</h2>
+
+<br>
+<br>
+
+<% if @attack.nil? %>
+<form action="/attack" method="POST">
+<input type="submit" value="Attack">
+</form>
+<% end %>
+
+<% unless @attack.nil? %>
+<h2><%= @name2 %> was attacked!</h2>
+<% end %>
