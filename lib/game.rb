@@ -19,4 +19,8 @@ class Game
     @turn += 1
   end
 
+  def next_turn
+    return @player_2 if @turn.odd? 
+    @player_1
+  end
 end

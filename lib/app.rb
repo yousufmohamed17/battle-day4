@@ -26,12 +26,13 @@ class Battle < Sinatra::Base
 
   post "/attack" do
     session[:attack] = true
-    $game.attack($game.player_2)
+    $game.attack($game.next_turn)
     redirect "/play"
   end
 
   post "/switch" do
     $game.change_turn
+    session[:attack] = nil
     redirect "/play"
   end
 

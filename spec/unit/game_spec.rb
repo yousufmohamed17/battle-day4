@@ -28,4 +28,10 @@ describe Game do
       expect { subject.change_turn }.to change { subject.turn }.by(1)
     end
   end
+
+  describe "#next_turn" do
+    it "should tell us who's turn is next" do
+      expect(subject.next_turn).to eq(subject.player_2)
+    end
+  end
 end
