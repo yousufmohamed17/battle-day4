@@ -1,6 +1,6 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
-require_relative 'player'
+require_relative 'game'
 
 class Battle < Sinatra::Base
   configure :development do
@@ -27,6 +27,10 @@ class Battle < Sinatra::Base
   post "/attack" do
     session[:attack] = true
     $game.attack($game.player_2)
+    redirect "/play"
+  end
+
+  post "/switch" do
     redirect "/play"
   end
 
