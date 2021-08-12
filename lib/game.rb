@@ -1,9 +1,9 @@
 class Game
 
-DEFAULT_ATTACK = 10
+  DEFAULT_ATTACK = 10
 
-def attacked(who)
-  who.hp -= DEFAULT_ATTACK
-end
+  def attack(player)
+    player.receive_damage
+  end
 
 end
