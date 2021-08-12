@@ -2,6 +2,9 @@ class Game
 
   DEFAULT_ATTACK = 10
 
+  def initialize(one, two)
+  end
+
   def attack(player)
     player.receive_damage
   end
