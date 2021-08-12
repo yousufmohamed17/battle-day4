@@ -1,9 +1,9 @@
-<h1><%= $player1.name %> vs <%= $player2.name %></h1>
+<h1><%= $game.player_1.name %> vs <%= $game.player_2.name %></h1>
 
 <br>
 <br>
 
-<h2><%= $player2.name %>'s HP: <%= $player2.hp %></h2>
+<h2><%= $game.player_2.name %>'s HP: <%= $game.player_2.hp %></h2>
 
 <br>
 <br>
@@ -15,5 +15,5 @@
 <% end %>
 
 <% unless @attack.nil? %>
-<h2><%= $player2.name %> was attacked!</h2>
+<h2><%= $game.player_2.name %> was attacked!</h2>
 <% end %>
