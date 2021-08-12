@@ -27,8 +27,6 @@ class Battle < Sinatra::Base
   end
 
   post "/attack" do
-    # session[:name1] = @name1
-    # session[:name2] = @name2
     session[:attack] = true
     redirect "/play"
   end
