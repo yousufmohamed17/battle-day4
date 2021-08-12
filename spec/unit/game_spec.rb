@@ -10,6 +10,10 @@ describe Game do
       expect(subject).to respond_to(:player_1)
       expect(subject).to respond_to(:player_2)
     end
+
+    it "starts with turn for player 1" do
+      expect(subject.turn).to eq(1)
+    end
   end
 
   describe "#attack" do
@@ -19,4 +23,9 @@ describe Game do
     end
   end
 
+  describe "#change_turn" do
+    it "should increase turn attribute by 1" do
+      expect { subject.change_turn }.to change { subject.turn }.by(1)
+    end
+  end
 end

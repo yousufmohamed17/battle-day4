@@ -31,6 +31,7 @@ class Battle < Sinatra::Base
   end
 
   post "/switch" do
+    $game.change_turn
     redirect "/play"
   end
 

@@ -8,7 +8,13 @@
 <br>
 <br>
 
+<% if $game.turn.odd? %>
 <h2>It is <%= $game.player_1.name %>'s turn</h2>
+<% end %>
+
+<% if $game.turn.even? %>
+<h2>It is <%= $game.player_2.name %>'s turn</h2>
+<% end %>
 
 <br>
 <br>
